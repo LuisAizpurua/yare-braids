@@ -1,5 +1,21 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@images/*": [
+        "./src/assets/images/*"
+      ]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  }
 }

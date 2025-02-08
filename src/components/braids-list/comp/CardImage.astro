@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+
+// interface Props{
+//     imageUrl: string,
+//     name: string
+// }
+
+const {imageUrl, name} = Astro.props
+
+---
+
+<div class="w-full h-full rounded-xl shadow-2xs overflow-hidden ">  
+    <Image
+      src={imageUrl}
+      width={200}
+      height={200}
+      format={'jpeg'}
+      alt={name}
+      quality={'max'}
+      class={"w-full h-full object-cover"}
+    />
+</div>

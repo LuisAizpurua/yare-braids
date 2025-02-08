@@ -1,0 +1,21 @@
+---
+import type { prices } from 'src/interface/braids.interface'
+
+
+interface Props{
+    id: number,
+    price: prices[]
+}
+
+const {id, price} = Astro.props
+---
+
+<div id={`info-add-${id}`}  class="hidden w-full text-left bg-[#cbcbde] transition-all duration-1000 ease-in-out" >
+    <ul class="ml-5">
+      {
+        price.map(p=>(
+          <li>{p.total} - {p.includeMaterial?'Si':'No'} incluye material</li>
+        ))
+      }
+    </ul>
+  </div>

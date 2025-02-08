@@ -1,22 +1,32 @@
+---
+import "../styles/global.css";
+import { ViewTransitions } from "astro:transitions";
+import BaseHead from "src/components/head/BaseHead.astro";
+import type { braidsType } from "src/interface/braids.interface";
+import { Consts } from 'src/consts';
+
+
+interface Props{
+    id?: string,
+    data?: braidsType
+	image?: string
+}
+
+const {id,image= Consts.image, data} = Astro.props
+const name  = data?.name ??Consts.name;
+const description = Consts.description;
+
+const url_image = image?? `/braids/${id}`;
+---
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+	<BaseHead title={name} name={name} description={description!} image={url_image} />
+	 <ViewTransitions/>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-gray-200">
+		<main class="m-10">
+		    <slot />
+		</main>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

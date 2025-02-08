@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from "astro";
+import { actions } from "astro:actions";
+import IndexStatic from "src/components/page-static/IndexStatic.astro";
+import NavStatic from "src/components/page-static/NavStatic.astro";
+import type { braidsType } from "src/interface/braids.interface";
+import Layout from "src/layouts/Layout.astro";
+
+export const prerender = true
+
+export const getStaticPaths = (async () => {
+    const base = import.meta.env.PUBLIC_BASE_URL
+    const data = await (await fetch(`${base}/api/getRoutes.json`)).json() as braidsType[];
+    
+    return data.map((item) => ({
+        params: { id: item.id.toString()},
+        props: {data: item}
+    }));
+}) satisfies GetStaticPaths;
+
+const {id} = Astro.params;
+const {data} = Astro.props
+---
+
+ <Layout id={id} data={data}>
+      <NavStatic/>
+      <IndexStatic {...data}/>
+</Layout> 

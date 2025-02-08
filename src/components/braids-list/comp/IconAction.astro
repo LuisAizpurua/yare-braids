@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+import type { prices } from "src/interface/braids.interface";
+
+export const prerender = false
+
+interface Props{
+    id: number,
+    price: prices[]
+}
+
+const {id,price} = Astro.props
+---
+<Icon class:list={['ml-2 hover:opacity-20 cursor-pointer animate-spin', `icon-see${id}`, 'see']}  
+name={'see'} size={25}/> 
+<Icon class:list={['ml-2 cursor-pointer animate-pulse', `icon-see-${id}`, 'less','hidden']} name={'less'} size={20}/>
+
+<span class="hidden" id="">
+   <ul>
+     {
+        price.map(
+            ({total, includeMaterial })=> 
+            (<li>${total} - {includeMaterial}</li>)
+        )
+     }
+   </ul>
+</span>
+

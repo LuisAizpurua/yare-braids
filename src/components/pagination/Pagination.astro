@@ -1,0 +1,13 @@
+---
+import { Icon } from "astro-icon/components"
+import SectionPaginate from "./SectionPaginate.astro"
+
+const {next, prev, current} = Astro.props
+
+---
+
+<header class="my-8 m-auto text-center overflow-hidden shadow-2xs shadow-gray-200">
+ <SectionPaginate next={next} 
+                  prev={prev} 
+                  current={current}/>
+</header>

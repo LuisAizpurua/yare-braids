@@ -1,6 +1,5 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { actions } from "astro:actions";
 import IndexStatic from "src/components/page-static/IndexStatic.astro";
 import NavStatic from "src/components/page-static/NavStatic.astro";
 import type { BraidsType } from "src/interface/braidsPrices.interface";
@@ -9,7 +8,9 @@ import Layout from "src/layouts/Layout.astro";
 export const prerender = true
 
 export const getStaticPaths = (async () => {
-    const base = import.meta.env.PUBLIC_BASE_URL
+     const base = import.meta.env.PUBLIC_BASE_URL ||  "http://localhost:4321"
+    //const base = 'https://yare-braids.pages.dev'
+    try{
     const response = await fetch(`${base}/api/getAll.json`);
 
     if (!response.ok) {
@@ -21,10 +22,14 @@ export const getStaticPaths = (async () => {
         params: { id: item.id.toString()},
         props: {data: item}
     }));
+    } catch (error) {
+        console.error("⚠️ Error en getStaticPaths:", error);
+        return []; 
+    }
 }) satisfies GetStaticPaths;
 
 const {id} = Astro.params;
-const {data} = Astro.props
+ const {data} = Astro.props
 ---
 
  <Layout id={id} data={data}>

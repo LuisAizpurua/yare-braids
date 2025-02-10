@@ -11,6 +11,7 @@ export const prerender = true
 
 export const getStaticPaths = (async ({ paginate }) => {
   const base = import.meta.env.PUBLIC_BASE_URL;
+  try{
   const response = await fetch(`${base}/api/getAll.json`);
 
   if (!response.ok) {
@@ -19,6 +20,11 @@ export const getStaticPaths = (async ({ paginate }) => {
   const dataResponse = (await response.json()) as BraidsType[];
  
   return paginate(dataResponse, { pageSize: 3 });
+
+} catch (error) {
+        console.error("⚠️ Error en getStaticPaths:", error);
+        return []; 
+    }
 }) satisfies GetStaticPaths;
 
 const { data, url } = Astro.props.page;

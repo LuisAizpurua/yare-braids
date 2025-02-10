@@ -1,21 +1,31 @@
 ---
-import type { prices } from 'src/interface/braids.interface'
+import type { DeserializePriceType } from 'src/interface/deserializePrice.interface'
 
+export const prerender = false
 
 interface Props{
     id: number,
-    price: prices[]
+    prices: DeserializePriceType[]
 }
 
-const {id, price} = Astro.props
+const {id, prices} = Astro.props
 ---
 
-<div id={`info-add-${id}`}  class="hidden w-full text-left bg-[#cbcbde] transition-all duration-1000 ease-in-out" >
-    <ul class="ml-5">
+<div id={`info-add-${id}`}  class="hidden w-full transition-transform text-left bg-[#cbcbde] duration-1000 ease-in-out" >
+    <ul class="ml-3 my-1">
       {
-        price.map(p=>(
-          <li>{p.total} - {p.includeMaterial?'Si':'No'} incluye material</li>
-        ))
+        prices.map(({Prices}) =>
+        !(!!Prices.infoExtra)?(
+          <li class="font-extrabold text-gray-600 my-1">
+            <span class="font-bold">${Prices.total}  - </span> {Prices.includeMaterial?'Si':'No'} incluye material
+          </li>
+        ):(
+        Prices.infoExtra.split('.').map(
+         (str)=>( 
+        <li class="font-extrabold font-serif text-gray-600 my-1">
+            {str}.
+         </li>
+        ))))
       }
     </ul>
-  </div>
+</div>

@@ -1,23 +1,21 @@
 ---
-import type { GetStaticPaths } from "astro";
-import type { braidsType } from "src/interface/braids.interface";
 
+import type { BraidsType } from "src/interface/braidsPrices.interface";
 import CardImage from "./comp/CardImage.astro";
 import TypeIcons from "./comp/TypeIcons.astro";
 
+ export const prerender = false
+
 interface Props{
-  data: braidsType
+  data: BraidsType
 }
 
-export const prerender = true;
-
 const { data } = Astro.props 
-
 ---
 <article class="flex flex-col justify-center items-center rounded-2xl bg-[#8b8b8b] w-80 h-80 overflow-hidden shadow-2xl shadow-gray-600 mx-5 my-7">
   <CardImage
     imageUrl={`/braids/braid-${data.id}.jpeg`}
-    {...(data as braidsType)}
+    {...data}
   />
-  <TypeIcons {...(data as braidsType)} />
+  <TypeIcons {...data} />
 </article>

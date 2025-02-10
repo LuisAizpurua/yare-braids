@@ -2,13 +2,14 @@
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "src/components/head/BaseHead.astro";
-import type { braidsType } from "src/interface/braids.interface";
 import { Consts } from 'src/consts';
+import type { BraidsType } from "src/interface/braidsPrices.interface";
 
+export const prerender = false
 
 interface Props{
     id?: string,
-    data?: braidsType
+    data?: BraidsType
 	image?: string
 }
 
@@ -22,10 +23,11 @@ const url_image = image?? `/braids/${id}`;
 <html lang="en">
 	<head>
 	<BaseHead title={name} name={name} description={description!} image={url_image} />
-	 <ViewTransitions/>
+	<ViewTransitions/>	
+	<script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
 	</head>
 	<body class="bg-gray-200">
-		<main class="m-10">
+		<main class="m-10 text-center">
 		    <slot />
 		</main>
 	</body>

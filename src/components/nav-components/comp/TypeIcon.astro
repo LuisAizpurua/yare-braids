@@ -2,12 +2,12 @@
 import { Icon } from "astro-icon/components";
 import icons from "../../../data/icons.data.json"
 
----
+const { iconNames = icons } = Astro.props
 
-<div class="flex flex-row justify-center items-center space-x-2">
+---
   {
-    icons.map(data=>(
-    <a href={data.href} target="_blank" title={data.name}>
+    iconNames.map(data=>(
+    <a class="transition-normal duration-1000 ease-in-out" href={data.href} target="_parent" title={data.name}>
       <Icon name={data.name} size={data.size} 
       class:list={[
         "cursor-pointer hover:text-blue-500 animate-pulse",
@@ -17,4 +17,3 @@ import icons from "../../../data/icons.data.json"
     </a>
     ))
   }  
-</div>

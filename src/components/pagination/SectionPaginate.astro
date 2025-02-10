@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components"
+import InputSearch from "./InputSearch.astro"
 
 export const prerender = false
 
@@ -14,27 +15,11 @@ const {prev, next, current} = Astro.props
 
 <nav class="w-full h-28 flex flex-wrap flex-row justify-center items-center">
     <section class="w-full flex flex-row flex-wrap justify-center items-center mx-2 space-x-2">
-        <input class="rounded-xl p-2 shadow-2xl shadow-gray-400" type="text" placeholder="Buscar..." />
-        <button class="bg-blue-400 rounded-2xl hover:cursor-pointer p-1.5 my-2 shadow-gray-600" id="btnSearch">
-            <span class="material-symbols-outlined p-0 m-0 hover:opacity-15 text-blue-700">
-                search
-                </span>
-        </button>
+        <InputSearch />
     </section>
-
         <section class="w-full flex-1"></section>
-        
         <section class="w-full text-center my-5">
             <a aria-disabled={!prev} class:list={["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl",{'pointer-events-none text-gray-700': !prev}]} href={`${prev}`}><Icon class={'hover:text-blue-600 inline'} name="minor"  size={40}/></a>
             <a aria-disabled={!next} class:list={["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl",{'pointer-events-none text-gray-700': !next}]} href={`${next}`}><Icon class={'hover:text-blue-600 inline'} name="heigher"size={40}/></a>
         </section>
   </nav>
-
-  <script >
-    const btnSearch = document.getElementById('btnSearch') as HTMLButtonElement
-    btnSearch.addEventListener('click', search)
-
-    function search(e){
-        console.log(e.target)
-    }
-  </script>

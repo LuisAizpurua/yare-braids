@@ -13,6 +13,8 @@ import cloudflare from '@astrojs/cloudflare';
 
 import solidJs from '@astrojs/solid-js';
 
+import node from '@astrojs/node';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -21,5 +23,8 @@ export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), db(), icon(), solidJs()],
    output:'server',
-   adapter: cloudflare()
+   adapter: node({
+     mode: 'standalone'
+   })
 });
+

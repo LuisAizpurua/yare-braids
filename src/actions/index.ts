@@ -1,7 +1,10 @@
-import { findAll } from "./action/findAll";
-import { findById } from "./action/findById";
+import { findAll, findAllBraid } from "./action/findAll";
+import { findBraidById } from "./action/findBraidById";
+import { findPriceById } from "./action/findPriceById";
 
 export const server =  {
     findAll,
-    findById
+    findPriceById,
+    findBraidById,
+    findAllBraid
 }

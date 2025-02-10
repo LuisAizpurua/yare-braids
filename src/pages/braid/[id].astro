@@ -3,16 +3,21 @@ import type { GetStaticPaths } from "astro";
 import { actions } from "astro:actions";
 import IndexStatic from "src/components/page-static/IndexStatic.astro";
 import NavStatic from "src/components/page-static/NavStatic.astro";
-import type { braidsType } from "src/interface/braids.interface";
+import type { BraidsType } from "src/interface/braidsPrices.interface";
 import Layout from "src/layouts/Layout.astro";
 
 export const prerender = true
 
 export const getStaticPaths = (async () => {
     const base = import.meta.env.PUBLIC_BASE_URL
-    const data = await (await fetch(`${base}/api/getRoutes.json`)).json() as braidsType[];
-    
-    return data.map((item) => ({
+    const response = await fetch(`${base}/api/getAll.json`);
+
+    if (!response.ok) {
+     throw new Error("Error al obtener los datos");
+    }
+    const dataResponse = (await response.json()) as BraidsType[];
+
+    return dataResponse.map((item) => ({
         params: { id: item.id.toString()},
         props: {data: item}
     }));
@@ -23,6 +28,6 @@ const {data} = Astro.props
 ---
 
  <Layout id={id} data={data}>
-      <NavStatic/>
-      <IndexStatic {...data}/>
+    <IndexStatic data={data}/>
+    <NavStatic name={data.name}/>
 </Layout> 

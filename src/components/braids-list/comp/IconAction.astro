@@ -1,28 +1,50 @@
 ---
 import { Icon } from "astro-icon/components";
-import type { prices } from "src/interface/braids.interface";
 
-export const prerender = false
+export const prerender = true
 
 interface Props{
-    id: number,
-    price: prices[]
+    id: number
 }
 
-const {id,price} = Astro.props
+const {id} = Astro.props
 ---
-<Icon class:list={['ml-2 hover:opacity-20 cursor-pointer animate-spin', `icon-see${id}`, 'see']}  
-name={'see'} size={25}/> 
-<Icon class:list={['ml-2 cursor-pointer animate-pulse', `icon-see-${id}`, 'less','hidden']} name={'less'} size={20}/>
 
-<span class="hidden" id="">
-   <ul>
-     {
-        price.map(
-            ({total, includeMaterial })=> 
-            (<li>${total} - {includeMaterial}</li>)
-        )
-     }
-   </ul>
-</span>
+<Icon data-id={id} class:list={['ml-2 w-5  hover:text-blue-500 cursor-pointer animate-spin hover:opacity-20', `see-${id}`, 'see']}  name={'see'} size={25}/> 
+<Icon data-id={id} class:list={['ml-2 w-5  cursor-pointer animate-pulse', `less-${id}`, 'less','hidden']} name={'less'} size={20}/>
 
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll(`.see`).forEach(tag=> tag.addEventListener('click', eventSee))
+  document.querySelectorAll(`.less`).forEach(tag=> tag.addEventListener('click', eventLess))
+
+  function eventSee(e){
+      actionBtn(e, 'less')
+   }
+
+  function eventLess(e){
+      actionBtn(e, 'see')
+   }
+
+  function actionBtn(e, tag: string){
+   const elementCurrent = getTarget(e) ;
+   const id = getDataId(elementCurrent)
+   const nameIcon = iconExactly(`.${tag}-${id}`)
+   hiddenAtt(elementCurrent, nameIcon)
+   document.getElementById(`info-add-${id}`)?.classList.toggle('hidden')
+  }
+
+  const hiddenAtt = (thisEle, otherEle) => {
+     if(!otherEle == null) return;
+     thisEle.classList.toggle('hidden')
+     otherEle.classList.toggle('hidden')
+  }
+  const getTarget = (event) =>{
+     event.stopPropagation()
+     return event.currentTarget;
+  }
+  const getDataId = (currentTarget) => currentTarget.closest('[data-id]')?.getAttribute('data-id')   
+  const iconExactly = (tag: string) => document.querySelector(tag)
+   })
+</script> 

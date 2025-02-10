@@ -14,7 +14,6 @@
     "@astrojs/cloudflare": "^12.2.1",
     "@astrojs/db": "^0.14.6",
     "@astrojs/mdx": "^4.0.8",
-    "@astrojs/node": "^9.0.2",
     "@astrojs/solid-js": "^5.0.4",
     "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",

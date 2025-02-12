@@ -1,7 +1,7 @@
 import 'es-module-lexer';
 import './chunks/shared_BTASe_bZ.mjs';
 import 'kleur/colors';
-import { A as AstroError, R as ResponseSentError, F as ForbiddenRewrite } from './chunks/astro/server_kl83uPKR.mjs';
+import { A as AstroError, R as ResponseSentError, F as ForbiddenRewrite } from './chunks/astro/server_Da4uZWVy.mjs';
 import 'clsx';
 import { serialize, parse } from 'cookie';
 import 'html-escaper';

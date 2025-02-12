@@ -4,10 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "dev:remote": "astro dev --remote",
     "build": "astro build",
-    "build:remote": "astro build --remote",
-    "preview": "astro preview --remote",
+    "preview": "astro preview ",
     "astro": "astro"
   },
   "dependencies": {

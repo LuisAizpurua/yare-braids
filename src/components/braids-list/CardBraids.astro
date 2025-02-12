@@ -11,10 +11,11 @@ interface Props{
 }
 
 const { data } = Astro.props 
+const base= 'https://yare-braids.netlify.app'
 ---
 <article class="flex flex-col justify-center items-center rounded-2xl bg-[#8b8b8b] w-80 h-80 overflow-hidden shadow-2xl shadow-gray-600 mx-5 my-7">
   <CardImage
-    imageUrl={`/braids/braid-${data.id}.webp`}
+    imageUrl={`${base}/braids/braid-${data.id}.webp`}
     {...data}
   />
   <TypeIcons {...data} />

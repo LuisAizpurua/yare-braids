@@ -19,7 +19,7 @@ const {prev, next, current} = Astro.props
     </section>
         <section class="w-full flex-1"></section> -->
         <section class="w-full text-center my-5">
-            <a aria-disabled={!prev} class:list={["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl",{'pointer-events-none text-gray-700': !prev}]} href={`${prev}`}><Icon class={'hover:text-blue-600 inline'} name="minor"  size={40}/></a>
-            <a aria-disabled={!next} class:list={["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl",{'pointer-events-none text-gray-700': !next}]} href={`${next}`}><Icon class={'hover:text-blue-600 inline'} name="heigher"size={40}/></a>
+            <a aria-disabled={!prev} class:list={["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl",{'hidden pointer-events-none text-gray-700': !prev}]} href={`${prev}`}><Icon class={'hover:text-blue-600 inline'} name="minor"  size={40}/></a>
+            <a aria-disabled={!next} class:list={["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl",{'hidden pointer-events-none text-gray-700': !next}]} href={`${next}`}><Icon class={'hover:text-blue-600 inline'} name="heigher"size={40}/></a>
         </section>
   </nav>

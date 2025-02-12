@@ -3,7 +3,7 @@ import 'kleur/colors';
 /* empty css                        */
 import 'clsx';
 
-const $$Astro$2 = createAstro("https://example.com");
+const $$Astro$2 = createAstro("https://yare-braid.netlify.app");
 const $$ClientRouter = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$ClientRouter;
@@ -11,7 +11,7 @@ const $$ClientRouter = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`<meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback"${addAttribute(fallback, "content")}>${renderScript($$result, "C:/Users/HOME/Desktop/Astro/yare-braids/node_modules/astro/components/ClientRouter.astro?astro&type=script&index=0&lang.ts")}`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/node_modules/astro/components/ClientRouter.astro", void 0);
 
-const $$Astro$1 = createAstro("https://example.com");
+const $$Astro$1 = createAstro("https://yare-braid.netlify.app");
 const $$BaseHead = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$BaseHead;
@@ -31,7 +31,7 @@ var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
-const $$Astro = createAstro("https://example.com");
+const $$Astro = createAstro("https://yare-braid.netlify.app");
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;

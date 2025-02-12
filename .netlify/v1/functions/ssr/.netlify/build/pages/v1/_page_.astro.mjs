@@ -1,12 +1,12 @@
 import { e as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, g as renderComponent, f as addAttribute, h as renderScript } from '../../chunks/astro/server_Bp8y7U-m.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from '../../chunks/_astro_assets_2kwcl21B.mjs';
+import { $ as $$Image } from '../../chunks/_astro_assets_heFenOuc.mjs';
 import 'clsx';
-import { a as $$Icon, $ as $$TypeIcon } from '../../chunks/TypeIcon_Pcn_6wVX.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_VX8PDpv4.mjs';
+import { a as $$Icon, $ as $$TypeIcon } from '../../chunks/TypeIcon_Ca19XoqP.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_VOi-RDNo.mjs';
 export { renderers } from '../../renderers.mjs';
 
-const $$Astro$7 = createAstro("https://example.com");
+const $$Astro$7 = createAstro("https://yare-braid.netlify.app");
 const $$CardImage = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$CardImage;
@@ -14,7 +14,7 @@ const $$CardImage = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div class="w-full h-full rounded-xl shadow-2xs overflow-hidden "> ${renderComponent($$result, "Image", $$Image, { "src": imageUrl, "width": 200, "height": 200, "format": "jpeg", "alt": name, "quality": "max", "class": "w-full h-full object-cover" })} </div>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/braids-list/comp/CardImage.astro", void 0);
 
-const $$Astro$6 = createAstro("https://example.com");
+const $$Astro$6 = createAstro("https://yare-braid.netlify.app");
 const $$InfoExtra = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$InfoExtra;
@@ -26,7 +26,7 @@ const $$InfoExtra = createComponent(($$result, $$props, $$slots) => {
   ))} </ul> </div>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/braids-list/comp/InfoExtra.astro", void 0);
 
-const $$Astro$5 = createAstro("https://example.com");
+const $$Astro$5 = createAstro("https://yare-braid.netlify.app");
 const $$IconAction = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$IconAction;
@@ -34,7 +34,7 @@ const $$IconAction = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Icon", $$Icon, { "data-id": id, "class:list": ["ml-2 w-5  hover:text-blue-500 cursor-pointer animate-spin hover:opacity-20", `see-${id}`, "see"], "name": "see", "size": 25 })} ${renderComponent($$result, "Icon", $$Icon, { "data-id": id, "class:list": ["ml-2 w-5  cursor-pointer animate-pulse", `less-${id}`, "less", "hidden"], "name": "less", "size": 20 })} ${renderScript($$result, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/braids-list/comp/IconAction.astro?astro&type=script&index=0&lang.ts")}`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/braids-list/comp/IconAction.astro", void 0);
 
-const $$Astro$4 = createAstro("https://example.com");
+const $$Astro$4 = createAstro("https://yare-braid.netlify.app");
 const $$TypeIcons = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$TypeIcons;
@@ -44,7 +44,7 @@ const $$TypeIcons = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div id="parent-info" class="flex flex-row p-5 bg-[#cbcbde] w-full"> <h1 class="font-bold text-gray-700 hover:cursor-pointer animate-pulse"> <a${addAttribute("/braid/" + id, "href")}>${name}</a> </h1> <div class="flex-1"></div> <div class="flex flex-row justify-center flex-wrap"> <p${addAttribute(`price-braid-${1}`, "id")} class="font-bold text-[#363636]">$${pricesBraid[0].Prices.total}</p> ${renderComponent($$result, "IconAction", $$IconAction, { "id": id })} </div> </div> ${renderComponent($$result, "InfoExtra", $$InfoExtra, { "id": id, "prices": pricesBraid })}`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/braids-list/comp/TypeIcons.astro", void 0);
 
-const $$Astro$3 = createAstro("https://example.com");
+const $$Astro$3 = createAstro("https://yare-braid.netlify.app");
 const $$CardBraids = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$CardBraids;
@@ -85,7 +85,7 @@ const $$NavBar = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<header class="w-full w-max-full text-center"> <nav class="rounded-4xl m-5 flex justify-center px-20 py-10 items-center shadow-2xl"> <ul class="flex flex-row flex-wrap justify-center items-center "> ${renderComponent($$result, "HeaderTitle", $$HeaderTitle, {})} ${renderComponent($$result, "HeaderLi", $$HeaderLi, {})} </ul> </nav> </header>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/nav-components/NavBar.astro", void 0);
 
-const $$Astro$2 = createAstro("https://example.com");
+const $$Astro$2 = createAstro("https://yare-braid.netlify.app");
 const $$SectionPaginate = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$SectionPaginate;
@@ -96,7 +96,7 @@ const $$SectionPaginate = createComponent(($$result, $$props, $$slots) => {
         <section class="w-full flex-1"></section> --> <section class="w-full text-center my-5"> <a${addAttribute(!prev, "aria-disabled")}${addAttribute(["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl", { "pointer-events-none text-gray-700": !prev }], "class:list")}${addAttribute(`${prev}`, "href")}>${renderComponent($$result, "Icon", $$Icon, { "class": "hover:text-blue-600 inline", "name": "minor", "size": 40 })}</a> <a${addAttribute(!next, "aria-disabled")}${addAttribute(["mx-2 w-20 m-auto underline-offset-0 text-blue-500 text-2xl", { "pointer-events-none text-gray-700": !next }], "class:list")}${addAttribute(`${next}`, "href")}>${renderComponent($$result, "Icon", $$Icon, { "class": "hover:text-blue-600 inline", "name": "heigher", "size": 40 })}</a> </section> </nav>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/pagination/SectionPaginate.astro", void 0);
 
-const $$Astro$1 = createAstro("https://example.com");
+const $$Astro$1 = createAstro("https://yare-braid.netlify.app");
 const $$Pagination = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Pagination;
@@ -104,7 +104,7 @@ const $$Pagination = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<header class="my-8 m-auto text-center overflow-hidden shadow-2xs shadow-gray-200"> ${renderComponent($$result, "SectionPaginate", $$SectionPaginate, { "next": next, "prev": prev, "current": current })} </header>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/pagination/Pagination.astro", void 0);
 
-const $$Astro = createAstro("https://example.com");
+const $$Astro = createAstro("https://yare-braid.netlify.app");
 const getStaticPaths = async ({ paginate }) => {
   try {
     const dataResponse = [{ "id": 1, "name": "Box Braids Small", "description": "Este estilo elegante y vers\xE1til, Ideal para quienes buscan un peinado pr\xE1ctico, con la opci\xF3n de personalizarlo con colores y accesorios" }, { "id": 2, "name": "Box Braids Medium", "description": "Perfecto para quienes buscan un peinado pr\xE1ctico y estilizado con menos tiempo de instalaci\xF3n que las trenzas finas" }, { "id": 3, "name": "Box Braids Jumbo", "description": "Trenzas gruesas y voluminosas, ideales para un look audaz y llamativo" }, { "id": 4, "name": "Boho Braids Small", "description": "Trenzas finas con un toque bohemio, ideales para un look relajado y desenfadado con acabado natural y estilizado" }, { "id": 5, "name": "Boho Braids Medium", "description": "Trenzas medianas que irradian un aire bohemio y fresco, perfectas para un look relajado y \xFAnico" }, { "id": 6, "name": "Boho Braids Jumbo", "description": "Un look bohemio excelente con trenzas gruesas que capturan todas las miradas con su estilo audaz y natural" }, { "id": 7, "name": "Box Braids 2", "description": "Trenzas bien definidas y de grosor medio, ofreciendo un estilo limpio, elegante y f\xE1cil de mantener. Ideal para un look duradero con un toque moderno" }, { "id": 8, "name": "Box Braids 4", "description": "Trenzas gruesas y llamativas, perfectas para un look audaz y lleno de volumen, Es r\xE1pido de hacer y destaca por su durabilidad y versatilidad" }, { "id": 9, "name": "Box Braids 6", "description": "Trenzas ultra gruesas que ofrecen un estilo impactante y lleno de personalidad" }, { "id": 10, "name": "Box Braids 8 o 10", "description": "Trenzas voluminosas que aportan un estilo potente y lleno de personalidad, ideales para un look fuerte, duradero y de gran impacto visual" }, { "id": 11, "name": "Front Braids", "description": "Trenzas delanteras que enmarcan el rostro con un estilo fresco y elegante, perfectas para un look pr\xE1ctico y chic. Ideal para quienes buscan un toque \xFAnico y moderno en su peinado" }];

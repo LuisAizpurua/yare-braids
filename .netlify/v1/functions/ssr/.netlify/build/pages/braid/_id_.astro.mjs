@@ -1,11 +1,11 @@
 import { e as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, f as addAttribute, g as renderComponent } from '../../chunks/astro/server_Bp8y7U-m.mjs';
 import 'kleur/colors';
 import 'clsx';
-import { i as icons, $ as $$TypeIcon } from '../../chunks/TypeIcon_Pcn_6wVX.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_VX8PDpv4.mjs';
+import { i as icons, $ as $$TypeIcon } from '../../chunks/TypeIcon_Ca19XoqP.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_VOi-RDNo.mjs';
 export { renderers } from '../../renderers.mjs';
 
-const $$Astro$1 = createAstro("https://example.com");
+const $$Astro$1 = createAstro("https://yare-braid.netlify.app");
 const $$IndexStatic = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$IndexStatic;
@@ -23,7 +23,7 @@ const $$NavStatic = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<header class="w-56 m-auto text-center overflow-hidden"> <label class="font-semibold">Contactanos: </label> <nav class="w-full m-auto text-center flex flex-wrap flex-row justify-center items-center"> <section class="w-full m-3 flex flex-nowrap flex-row justify-center items-center"> ${renderComponent($$result, "TypeIcon", $$TypeIcon, { "iconNames": iconNames })} </section> <section class="flex-1"></section> <section class="w-full text-center"> <button class="animation-pulse font-bold text-gray-700 shadow-2xs shadow-gray-700 hover:opacity-10 p-3 rounded-2xl bg-blue-500" onclick="history.back()">Regresar</button> </section> </nav> </header>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/src/components/page-static/NavStatic.astro", void 0);
 
-const $$Astro = createAstro("https://example.com");
+const $$Astro = createAstro("https://yare-braid.netlify.app");
 const getStaticPaths = async () => {
   try {
     const dataResponse = [{ "id": 1, "name": "Box Braids Small", "description": "Este estilo elegante y vers\xE1til, Ideal para quienes buscan un peinado pr\xE1ctico, con la opci\xF3n de personalizarlo con colores y accesorios" }, { "id": 2, "name": "Box Braids Medium", "description": "Perfecto para quienes buscan un peinado pr\xE1ctico y estilizado con menos tiempo de instalaci\xF3n que las trenzas finas" }, { "id": 3, "name": "Box Braids Jumbo", "description": "Trenzas gruesas y voluminosas, ideales para un look audaz y llamativo" }, { "id": 4, "name": "Boho Braids Small", "description": "Trenzas finas con un toque bohemio, ideales para un look relajado y desenfadado con acabado natural y estilizado" }, { "id": 5, "name": "Boho Braids Medium", "description": "Trenzas medianas que irradian un aire bohemio y fresco, perfectas para un look relajado y \xFAnico" }, { "id": 6, "name": "Boho Braids Jumbo", "description": "Un look bohemio excelente con trenzas gruesas que capturan todas las miradas con su estilo audaz y natural" }, { "id": 7, "name": "Box Braids 2", "description": "Trenzas bien definidas y de grosor medio, ofreciendo un estilo limpio, elegante y f\xE1cil de mantener. Ideal para un look duradero con un toque moderno" }, { "id": 8, "name": "Box Braids 4", "description": "Trenzas gruesas y llamativas, perfectas para un look audaz y lleno de volumen, Es r\xE1pido de hacer y destaca por su durabilidad y versatilidad" }, { "id": 9, "name": "Box Braids 6", "description": "Trenzas ultra gruesas que ofrecen un estilo impactante y lleno de personalidad" }, { "id": 10, "name": "Box Braids 8 o 10", "description": "Trenzas voluminosas que aportan un estilo potente y lleno de personalidad, ideales para un look fuerte, duradero y de gran impacto visual" }, { "id": 11, "name": "Front Braids", "description": "Trenzas delanteras que enmarcan el rostro con un estilo fresco y elegante, perfectas para un look pr\xE1ctico y chic. Ideal para quienes buscan un toque \xFAnico y moderno en su peinado" }];

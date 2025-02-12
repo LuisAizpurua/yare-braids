@@ -20,7 +20,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://example.com',
+  site: 'https://yare-braid.netlify.app',
   integrations: [mdx(), db(), icon(), solidJs()],
    output:'server',
    adapter: netlify()

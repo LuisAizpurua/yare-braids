@@ -1243,7 +1243,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_ByZ3mQJX.mjs'
+      './sharp_B7C6O7Xk.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1406,7 +1406,7 @@ function applyResponsiveAttributes({
   return attributes;
 }
 
-const $$Astro$1 = createAstro("https://example.com");
+const $$Astro$1 = createAstro("https://yare-braid.netlify.app");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Image;
@@ -1441,7 +1441,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(attributes)}${addAttribute(className, "class")}>`;
 }, "C:/Users/HOME/Desktop/Astro/yare-braids/node_modules/astro/components/Image.astro", void 0);
 
-const $$Astro = createAstro("https://example.com");
+const $$Astro = createAstro("https://yare-braid.netlify.app");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Picture;

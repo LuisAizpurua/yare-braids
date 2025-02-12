@@ -1,0 +1,9 @@
+[[headers]]
+  for = "/braids/*.jpeg"
+  [headers.values]
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "/braids/*.jpg"
+  [headers.values]
+    Content-Type = "image/jpeg"

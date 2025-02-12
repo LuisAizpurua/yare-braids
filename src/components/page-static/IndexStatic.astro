@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import type { BraidsType } from "src/interface/braidsPrices.interface";
 
 interface Props {
@@ -13,9 +14,10 @@ const { id, name, description, prices} = data;
 
 <div class="flex m-auto flex-col justify-center items-center w-fit">
   <div class="max-w-sm w-full m-auto rounded-2xl my-15 overflow-hidden shadow-lg ">
-    <img
+    <Image
       class={"w-full h-64"}
       width={10}
+      format="jpeg"
       height={10}
       src={`/braids/braid-${id}.jpeg`}
       alt={name}

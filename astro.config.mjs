@@ -9,9 +9,11 @@ import db from '@astrojs/db';
 
 import icon from 'astro-icon';
 
-import cloudflare from '@astrojs/cloudflare';
+//import cloudflare from '@astrojs/cloudflare';
 
 import solidJs from '@astrojs/solid-js';
+
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,6 +23,6 @@ export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), db(), icon(), solidJs()],
    output:'server',
-   adapter: cloudflare()
+   adapter: netlify()
 });
 

@@ -1,9 +1,9 @@
-[[headers]]
-  for = "/braids/*.jpeg"
-  [headers.values]
-    Content-Type = "image/jpeg"
+[build]
+  publish = "dist"
+  command = "npm run build"
 
 [[headers]]
-  for = "/braids/*.jpg"
+  for = "/*"
   [headers.values]
-    Content-Type = "image/jpeg"
+  Cache-Control = "public, max-age=31536000, immutable"
+  Content-Disposition = "inline"

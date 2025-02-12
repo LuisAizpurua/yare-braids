@@ -3,7 +3,7 @@ import InfoExtra from './InfoExtra.astro';
 import IconAction from './IconAction.astro';
 import type { DeserializePriceType } from 'src/interface/deserializePrice.interface';
 
-export const prerender = false
+export const prerender = true
 
 const {id, name, description} = Astro.props
 const base = import.meta.env.PUBLIC_BASE_URL;

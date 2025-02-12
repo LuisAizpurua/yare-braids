@@ -1,7 +1,5 @@
 import type { APIRoute } from "astro";
-import { BraidPrices, Braids, db, Prices } from "astro:db";
-import { eq } from "drizzle-orm";
-
+import { Braids, db} from "astro:db";
 
 export const GET: APIRoute = async ({params, request})=>{
     const nameParam = params.name?.toLowerCase();

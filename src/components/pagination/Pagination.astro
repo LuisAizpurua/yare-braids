@@ -1,8 +1,9 @@
 ---
 import SectionPaginate from "./SectionPaginate.astro"
 
-const {next=2, prev=1, current=1} = Astro.props
+export const prerender = true
 
+const {next=2, prev=1, current=1} = Astro.props
 ---
 
 <header class="my-8 m-auto text-center overflow-hidden shadow-2xs shadow-gray-200">

@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { Braids, db } from "astro:db";
 
-export const prerender = false
+// export const prerender = true
 
 export const GET: APIRoute = async ({params, request})=>{
     const data = await db.select().from(Braids)

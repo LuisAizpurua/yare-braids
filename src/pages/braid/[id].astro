@@ -5,7 +5,7 @@ import NavStatic from "src/components/page-static/NavStatic.astro";
 import type { BraidsType } from "src/interface/braidsPrices.interface";
 import Layout from "src/layouts/Layout.astro";
 
-//export const prerender = true
+export const prerender = true
 
 export const getStaticPaths = (async () => {
     const base = import.meta.env.PUBLIC_BASE_URL ||  "http://localhost:4321"

@@ -7,7 +7,7 @@ import Pagination from "src/components/pagination/Pagination.astro";
 import type { BraidsType } from "src/interface/braidsPrices.interface";
 import Layout from "src/layouts/Layout.astro";
 
-//export const prerender = true
+export const prerender = true
 
 export const getStaticPaths = (async ({ paginate }) => {
   try{

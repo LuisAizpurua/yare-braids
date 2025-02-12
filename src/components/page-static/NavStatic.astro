@@ -2,6 +2,7 @@
 import TypeIcon from "../nav-components/comp/TypeIcon.astro";
 import icons from "../../data/icons.data.json";
 
+export const prerender = true
 const iconNames = icons.filter(i=> !i.name.includes('info'))
 ---
 

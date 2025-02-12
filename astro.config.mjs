@@ -6,9 +6,9 @@ import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
 
-import cloudflare from '@astrojs/cloudflare';
+//import cloudflare from '@astrojs/cloudflare';
 
-//import netlify from "@astrojs/netlify";
+import netlify from "@astrojs/netlify";
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -16,6 +16,6 @@ export default defineConfig({
   },
   integrations: [mdx(), icon()],
     output:'static',
-    adapter: cloudflare()
+    adapter: netlify()
 });
 

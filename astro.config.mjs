@@ -14,6 +14,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  site:'https://yare-braids.netlify.app',
   integrations: [mdx(), icon()],
     output:'static',
     adapter: netlify()

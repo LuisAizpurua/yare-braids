@@ -1,17 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 
 const {imageUrl, name} = Astro.props
 ---
 
 <div class="w-full h-full rounded-xl shadow-2xs overflow-hidden ">  
-    <Image
+    <img
       src={imageUrl}
-      width={200}
-      height={200}
-      format={'jpg'}
+      width={180}
+      height={180}
       alt={name}
-      quality={'max'}
       class={"w-full h-full object-cover"}
     />
 </div>

@@ -299,7 +299,7 @@ function createAstro(site) {
   return {
     // TODO: this is no longer necessary for `Astro.site`
     // but it somehow allows working around caching issues in content collections for some tests
-    site: void 0,
+    site: new URL(site) ,
     generator: `Astro v${ASTRO_VERSION}`,
     glob: createAstroGlobFn()
   };
@@ -2076,4 +2076,4 @@ function createVNode(type, props) {
   return vnode;
 }
 
-export { AstroError as A, ExpectedImage as E, ForbiddenRewrite as F, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NoImageMetadata as N, ResponseSentError as R, UnsupportedImageFormat as U, renderHead as a, createAstro as b, createComponent as c, renderComponent as d, addAttribute as e, UnsupportedImageConversion as f, FailedToFetchRemoteImageDimensions as g, ExpectedImageOptions as h, ExpectedNotESMImage as i, InvalidImageService as j, ImageMissingAlt as k, Fragment as l, maybeRenderHead as m, renderScript as n, renderSlot as o, NOOP_MIDDLEWARE_HEADER as p, decodeKey as q, renderTemplate as r, spreadAttributes as s, toStyleString as t, unescapeHTML as u, renderJSX as v, createVNode as w, AstroJSX as x, AstroUserError as y, MissingSharp as z };
+export { AstroError as A, ExpectedImage as E, ForbiddenRewrite as F, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NoImageMetadata as N, ResponseSentError as R, UnsupportedImageFormat as U, renderHead as a, createAstro as b, createComponent as c, addAttribute as d, renderComponent as e, UnsupportedImageConversion as f, FailedToFetchRemoteImageDimensions as g, ExpectedImageOptions as h, ExpectedNotESMImage as i, InvalidImageService as j, ImageMissingAlt as k, Fragment as l, maybeRenderHead as m, renderScript as n, renderSlot as o, NOOP_MIDDLEWARE_HEADER as p, decodeKey as q, renderTemplate as r, spreadAttributes as s, toStyleString as t, unescapeHTML as u, renderJSX as v, createVNode as w, AstroJSX as x, AstroUserError as y, MissingSharp as z };

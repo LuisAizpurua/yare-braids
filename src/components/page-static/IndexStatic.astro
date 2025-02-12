@@ -9,18 +9,15 @@ interface Props {
 const hrefWa = "https://wa.me/50766533136"
 const { data } = Astro.props;
 const { id, name, description, prices} = data;
-const base= 'https://yare-braids.netlify.app'
 ---
 
 <div class="flex m-auto flex-col justify-center items-center w-fit">
   <div class="max-w-sm w-full m-auto rounded-2xl my-15 overflow-hidden shadow-lg ">
-    <Image
+    <img
       class={"w-full h-64"}
       width={10}
-      format={'jpg'}
       height={10}
-      quality={100}
-      src={`${base}/braids/braid-${id}.jpg`}
+      src={`/braids/braid-${id}.jpg`}
       alt={name}
     />
     <div class="px-6 py-4">

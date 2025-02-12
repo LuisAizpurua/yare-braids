@@ -12,15 +12,11 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.2.1",
-    "@astrojs/db": "^0.14.6",
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/netlify": "^6.1.0",
-    "@astrojs/solid-js": "^5.0.4",
     "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",
     "astro-icon": "^1.1.5",
-    "htmx.org": "^2.0.4",
-    "solid-js": "^1.9.4",
     "tailwindcss": "^4.0.4",
     "tom-select": "^2.4.2",
     "yare-braids": "file:"

@@ -1,1 +1,107 @@
-[{"id":1,"name":"Box Braids Small","description":"Este estilo elegante y versátil, Ideal para quienes buscan un peinado práctico, con la opción de personalizarlo con colores y accesorios"},{"id":2,"name":"Box Braids Medium","description":"Perfecto para quienes buscan un peinado práctico y estilizado con menos tiempo de instalación que las trenzas finas"},{"id":3,"name":"Box Braids Jumbo","description":"Trenzas gruesas y voluminosas, ideales para un look audaz y llamativo"},{"id":4,"name":"Boho Braids Small","description":"Trenzas finas con un toque bohemio, ideales para un look relajado y desenfadado con acabado natural y estilizado"},{"id":5,"name":"Boho Braids Medium","description":"Trenzas medianas que irradian un aire bohemio y fresco, perfectas para un look relajado y único"},{"id":6,"name":"Boho Braids Jumbo","description":"Un look bohemio excelente con trenzas gruesas que capturan todas las miradas con su estilo audaz y natural"},{"id":7,"name":"Box Braids 2","description":"Trenzas bien definidas y de grosor medio, ofreciendo un estilo limpio, elegante y fácil de mantener. Ideal para un look duradero con un toque moderno"},{"id":8,"name":"Box Braids 4","description":"Trenzas gruesas y llamativas, perfectas para un look audaz y lleno de volumen, Es rápido de hacer y destaca por su durabilidad y versatilidad"},{"id":9,"name":"Box Braids 6","description":"Trenzas ultra gruesas que ofrecen un estilo impactante y lleno de personalidad"},{"id":10,"name":"Box Braids 8 o 10","description":"Trenzas voluminosas que aportan un estilo potente y lleno de personalidad, ideales para un look fuerte, duradero y de gran impacto visual"},{"id":11,"name":"Front Braids","description":"Trenzas delanteras que enmarcan el rostro con un estilo fresco y elegante, perfectas para un look práctico y chic. Ideal para quienes buscan un toque único y moderno en su peinado"}]
+[
+  {
+    "id": 1,
+    "name": "Box Braids Small",
+    "prices": [
+      { "total": 25.0, "includeMaterial": false },
+      { "total": 45.0, "includeMaterial": true }
+    ],
+    "description": "Este estilo elegante y versátil, Ideal para quienes buscan un peinado práctico, con la opción de personalizarlo con colores y accesorios"
+  },
+  {
+    "id": 2,
+    "name": "Box Braids Medium",
+    "prices": [
+      { "total": 20.0, "includeMaterial": false },
+      { "total": 40.0, "includeMaterial": true }
+    ],
+    "description": "Perfecto para quienes buscan un peinado práctico y estilizado con menos tiempo de instalación que las trenzas finas"
+  },
+  {
+    "id": 3,
+    "name": "Box Braids Jumbo",
+    "prices": [
+      { "total": 10.0, "includeMaterial": false },
+      { "total": 25.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas gruesas y voluminosas, ideales para un look audaz y llamativo"
+  },
+  {
+    "id": 4,
+    "name": "Boho Braids Small",
+    "prices": [
+      { "total": 30.0, "includeMaterial": false },
+      { "total": 60.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas finas con un toque bohemio, ideales para un look relajado y desenfadado con acabado natural y estilizado"
+  },
+  {
+    "id": 5,
+    "name": "Boho Braids Medium",
+    "prices": [
+      { "total": 25.0, "includeMaterial": false },
+      { "total": 55.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas medianas que irradian un aire bohemio y fresco, perfectas para un look relajado y único"
+  },
+  {
+    "id": 6,
+    "name": "Boho Braids Jumbo",
+    "prices": [
+      { "total": 15.0, "includeMaterial": false },
+      { "total": 30.0, "includeMaterial": true }
+    ],
+    "description": "Un look bohemio excelente con trenzas gruesas que capturan todas las miradas con su estilo audaz y natural"
+  },
+  {
+    "id": 7,
+    "name": "Box Braids 2",
+    "prices": [
+      { "total": 4.0, "includeMaterial": false },
+      { "total": 10.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas bien definidas y de grosor medio, ofreciendo un estilo limpio, elegante y fácil de mantener. Ideal para un look duradero con un toque moderno"
+  },
+  {
+    "id": 8,
+    "name": "Box Braids 4",
+    "prices": [
+      { "total": 8.0, "includeMaterial": false },
+      { "total": 16.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas gruesas y llamativas, perfectas para un look audaz y lleno de volumen, Es rápido de hacer y destaca por su durabilidad y versatilidad"
+  },
+  {
+    "id": 9,
+    "name": "Box Braids 6",
+    "prices": [
+      { "total": 10.0, "includeMaterial": false },
+      { "total": 20.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas ultra gruesas que ofrecen un estilo impactante y lleno de personalidad"
+  },
+  {
+    "id": 10,
+    "name": "Box Braids 8 o 10",
+    "prices": [
+      { "total": 15.0, "includeMaterial": false },
+      { "total": 25.0, "includeMaterial": true }
+    ],
+    "description": "Trenzas voluminosas que aportan un estilo potente y lleno de personalidad, ideales para un look fuerte, duradero y de gran impacto visual"
+  },
+  {
+    "id": 11,
+    "name": "Front Braids",
+    "prices": [
+      {
+        "total": 5.0,
+        "includeMaterial": false,
+        "infoExtras": [
+          "Puede elegir un diseño distinto al de referencia",
+          "No incluye material ni accesorios"
+        ]
+      }
+    ],
+    "description": "Trenzas delanteras que enmarcan el rostro con un estilo fresco y elegante, perfectas para un look práctico y chic. Ideal para quienes buscan un toque único y moderno en su peinado"
+  }
+]

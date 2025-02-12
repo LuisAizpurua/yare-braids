@@ -1,21 +1,14 @@
 ---
 import type { BraidsType } from "src/interface/braidsPrices.interface";
-import type { DeserializePriceType } from "src/interface/deserializePrice.interface";
-
-export const prerender = true;
 
 interface Props {
   data: BraidsType;
 }
 
-const baseUrl = import.meta.env.PUBLIC_BASE_URL
 const hrefWa = "https://wa.me/50766533136"
 const { data } = Astro.props;
-const { id, name, description} = data;
+const { id, name, description, prices} = data;
 
-const base = import.meta.env.PUBLIC_BASE_URL;
-
-const pricesBraid: DeserializePriceType[] = await (await fetch(`${base}/api/price/${id}`)).json();
 ---
 
 <div class="flex m-auto flex-col justify-center items-center w-fit">
@@ -35,9 +28,9 @@ const pricesBraid: DeserializePriceType[] = await (await fetch(`${base}/api/pric
     </div>
     <div class="px-6 pt-4 pb-2">
       {
-        pricesBraid.map( ({Prices}) =>(
+        prices.map( ({total}) =>(
           <span class="inline-block bg-gray-500 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            <a class="hover:cursor-pointer" href={hrefWa +`?text=${baseUrl}/braid/${id}`}>$ {Prices.total}</a>
+            <a class="hover:cursor-pointer" href={hrefWa}> ${total}</a>
           </span>
         ))
       }

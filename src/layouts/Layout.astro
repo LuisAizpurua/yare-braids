@@ -8,16 +8,16 @@ import type { BraidsType } from "src/interface/braidsPrices.interface";
 export const prerender = true
 
 interface Props{
-    id?: string,
+    id?: string | number,
+	image?: string,
     data?: BraidsType
-	image?: string
 }
 
-const {id,image= Consts.image, data} = Astro.props
+const {id, image= Consts.image, data} = Astro.props
 const name  = data?.name ??Consts.name;
 const description = Consts.description;
 
-const url_image = image?? `/braids/${id}`;
+const url_image = image?? `https://yare-braids.pages.dev/braids/${id}`;
 ---
 <!doctype html>
 <html lang="en">

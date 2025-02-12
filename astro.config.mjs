@@ -4,14 +4,9 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import mdx from '@astrojs/mdx';
-
-import db from '@astrojs/db';
-
 import icon from 'astro-icon';
 
 //import cloudflare from '@astrojs/cloudflare';
-
-import solidJs from '@astrojs/solid-js';
 
 import netlify from "@astrojs/netlify";
 
@@ -20,9 +15,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://yare-braid.netlify.app',
-  integrations: [mdx(), db(), icon(), solidJs()],
-   output:'server',
-   adapter: netlify()
+  integrations: [mdx(), icon()],
+    output:'static',
+    adapter: netlify()
 });
 

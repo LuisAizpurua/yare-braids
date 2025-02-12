@@ -236,24 +236,6 @@ The static route '${to}' is rendered by the component
 HTML file, which can't be retrieved at runtime by Astro.`,
   hint: (component) => `Add \`export const prerender = false\` to the component '${component}', or use a Astro.redirect().`
 };
-const ActionsReturnedInvalidDataError = {
-  name: "ActionsReturnedInvalidDataError",
-  title: "Action handler returned invalid data.",
-  message: (error) => `Action handler returned invalid data. Handlers should return serializable data types like objects, arrays, strings, and numbers. Parse error: ${error}`,
-  hint: "See the devalue library for all supported types: https://github.com/rich-harris/devalue"
-};
-const ActionNotFoundError = {
-  name: "ActionNotFoundError",
-  title: "Action not found.",
-  message: (actionName) => `The server received a request for an action named \`${actionName}\` but could not find a match. If you renamed an action, check that you've updated your \`actions/index\` file and your calling code to match.`,
-  hint: "You can run `astro check` to detect type errors caused by mismatched action names."
-};
-const ActionCalledFromServerError = {
-  name: "ActionCalledFromServerError",
-  title: "Action unexpected called from the server.",
-  message: "Action called from a server page or endpoint without using `Astro.callAction()`. This wrapper must be used to call actions from server code.",
-  hint: "See the `Astro.callAction()` reference for usage examples: https://docs.astro.build/en/reference/api-reference/#callaction"
-};
 
 function validateArgs(args) {
   if (args.length !== 3) return false;
@@ -291,7 +273,6 @@ function createComponent(arg1, moduleId, propagation) {
 
 const ASTRO_VERSION = "5.2.5";
 const NOOP_MIDDLEWARE_HEADER = "X-Astro-Noop";
-const REDIRECT_STATUS_CODES = [301, 302, 303, 307, 308, 300, 304];
 
 function createAstroGlobFn() {
   const globHandler = (importMetaGlobResult) => {
@@ -318,7 +299,7 @@ function createAstro(site) {
   return {
     // TODO: this is no longer necessary for `Astro.site`
     // but it somehow allows working around caching issues in content collections for some tests
-    site: new URL(site) ,
+    site: void 0,
     generator: `Astro v${ASTRO_VERSION}`,
     glob: createAstroGlobFn()
   };
@@ -2095,4 +2076,4 @@ function createVNode(type, props) {
   return vnode;
 }
 
-export { AstroError as A, createVNode as B, AstroJSX as C, AstroUserError as D, ExpectedImage as E, ForbiddenRewrite as F, MissingSharp as G, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NoImageMetadata as N, ResponseSentError as R, UnsupportedImageFormat as U, ActionNotFoundError as a, ActionCalledFromServerError as b, createComponent as c, renderHead as d, createAstro as e, addAttribute as f, renderComponent as g, renderScript as h, UnsupportedImageConversion as i, FailedToFetchRemoteImageDimensions as j, ExpectedImageOptions as k, ExpectedNotESMImage as l, maybeRenderHead as m, InvalidImageService as n, ImageMissingAlt as o, Fragment as p, renderSlot as q, renderTemplate as r, spreadAttributes as s, toStyleString as t, unescapeHTML as u, NOOP_MIDDLEWARE_HEADER as v, decodeKey as w, REDIRECT_STATUS_CODES as x, ActionsReturnedInvalidDataError as y, renderJSX as z };
+export { AstroError as A, ExpectedImage as E, ForbiddenRewrite as F, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NoImageMetadata as N, ResponseSentError as R, UnsupportedImageFormat as U, renderHead as a, createAstro as b, createComponent as c, addAttribute as d, renderComponent as e, UnsupportedImageConversion as f, FailedToFetchRemoteImageDimensions as g, ExpectedImageOptions as h, ExpectedNotESMImage as i, InvalidImageService as j, ImageMissingAlt as k, Fragment as l, maybeRenderHead as m, renderScript as n, renderSlot as o, NOOP_MIDDLEWARE_HEADER as p, decodeKey as q, renderTemplate as r, spreadAttributes as s, toStyleString as t, unescapeHTML as u, renderJSX as v, createVNode as w, AstroJSX as x, AstroUserError as y, MissingSharp as z };

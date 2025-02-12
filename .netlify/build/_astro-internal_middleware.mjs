@@ -1,11 +1,10 @@
 import 'es-module-lexer';
-import './chunks/shared_ClgjG3Yl.mjs';
+import './chunks/shared_BTASe_bZ.mjs';
 import 'kleur/colors';
-import { A as AstroError, R as ResponseSentError, F as ForbiddenRewrite } from './chunks/astro/server_Bp8y7U-m.mjs';
+import { A as AstroError, R as ResponseSentError, F as ForbiddenRewrite } from './chunks/astro/server_kl83uPKR.mjs';
 import 'clsx';
 import { serialize, parse } from 'cookie';
 import 'html-escaper';
-import { a as apiContextRoutesSymbol, g as getActionContext } from './chunks/server_I0L8n47T.mjs';
 
 const DELETED_EXPIRATION = /* @__PURE__ */ new Date(0);
 const DELETED_VALUE = "deleted";
@@ -214,6 +213,8 @@ function getParams(route, pathname) {
   return params;
 }
 
+const apiContextRoutesSymbol = Symbol.for("context.routes");
+
 function sequence(...handlers) {
   const filtered = handlers.filter((h) => !!h);
   const length = filtered.length;
@@ -277,27 +278,17 @@ function defineMiddleware(fn) {
   return fn;
 }
 
-const onRequest$2 = defineMiddleware(({ url, redirect }, next) => {
+const onRequest$1 = defineMiddleware(({ url, redirect }, next) => {
   if (url.pathname === "/" || url.pathname === "") {
     return redirect("/v1/1", 302);
   }
   return next();
 });
 
-const onRequest$1 = defineMiddleware(async (context, next) => {
-  if (context.isPrerendered) return next();
-  const { action, setActionResult, serializeActionResult } = getActionContext(context);
-  if (action?.calledFrom === "form") {
-    const actionResult = await action.handler();
-    setActionResult(action.name, serializeActionResult(actionResult));
-  }
-  return next();
-});
-
 const onRequest = sequence(
 	
-	onRequest$2,
 	onRequest$1
+	
 );
 
 export { onRequest };

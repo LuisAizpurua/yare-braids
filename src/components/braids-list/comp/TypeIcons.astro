@@ -1,14 +1,10 @@
 ---
 import InfoExtra from './InfoExtra.astro';
 import IconAction from './IconAction.astro';
-import type { DeserializePriceType } from 'src/interface/deserializePrice.interface';
 
 export const prerender = true
 
-const {id, name, description} = Astro.props
-const base = import.meta.env.PUBLIC_BASE_URL;
-
-const pricesBraid: DeserializePriceType[] = await (await fetch(`${base}/api/price/${id}`)).json();
+const {id, name, description, prices} = Astro.props
 ---
 
 <div id="parent-info" class="flex flex-row p-5 bg-[#cbcbde] w-full">
@@ -18,8 +14,8 @@ const pricesBraid: DeserializePriceType[] = await (await fetch(`${base}/api/pric
     <div class="flex-1"></div>
   
     <div class="flex flex-row justify-center flex-wrap">
-    <p id={`price-braid-${1}`} class="font-bold text-[#363636]">${pricesBraid[0].Prices.total}</p>
+    <p id={`price-braid-${1}`} class="font-bold text-[#363636]">${prices[0].total}</p>
            <IconAction id={id}/>
     </div>
 </div>
-<InfoExtra id={id} prices={pricesBraid} /> 
+<InfoExtra id={id} prices={prices} /> 

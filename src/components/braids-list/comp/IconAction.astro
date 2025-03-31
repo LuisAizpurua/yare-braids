@@ -1,14 +1,17 @@
 ---
 import { Icon } from "astro-icon/components";
 
-export const prerender = true
+export const prerender = false
 
 interface Props{
-    id: number
+    id: number,
+    // thisIcon?: boolean
 }
 
 const {id} = Astro.props
 ---
 
-<Icon data-id={id} class:list={['ml-2 w-5  hover:text-blue-500 cursor-pointer animate-spin hover:opacity-20', `see-${id}`, 'see']}  name={'see'} size={25}/> 
-<Icon data-id={id} class:list={['ml-2 w-5  cursor-pointer animate-pulse', `less-${id}`, 'less','hidden']} name={'less'} size={20}/>
+<button  class="peer" id={`btn-${id}`} name="btn">
+        <Icon data-id={id} class:list={['ml-2 w-5 peer-checked:bg-amber-700 hover:text-blue-500 cursor-pointer animate-spin hover:opacity-20', `see-${id}`, 'see']}  name={'card/see'} size={25}/> 
+         <!-- <Icon data-id={id} class:list={['ml-2 w-5 peer-checked:bg-amber-700 cursor-pointer animate-pulse', `less-${id}`, 'less','hidden']} name={'card/less'} size={20}/> -->
+</button>

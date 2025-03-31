@@ -6,12 +6,12 @@ const { iconNames = icons } = Astro.props
 
 ---
   {
-    iconNames.map(data=>(
-    <a class="transition-normal duration-1000 ease-in-out" href={data.href} target="_parent" title={data.name}>
-      <Icon name={data.name} size={data.size} 
+    iconNames.map(({name,size, href})=>(
+    <a class="transition-normal duration-1000 ease-in-out" href={href} target="_parent" title={name}>
+      <Icon name={`network/${name}`} size={size} 
       class:list={[
         "cursor-pointer hover:text-blue-500 animate-pulse",
-        {"ml-2": data.name.includes("whatsapp")}
+        {"ml-2": name.includes("whatsapp")}
       ]}
       />
     </a>

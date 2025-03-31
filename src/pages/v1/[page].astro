@@ -21,14 +21,14 @@ export const getStaticPaths = (async ({ paginate }) => {
     }
 }) satisfies GetStaticPaths;
 
-const { data, url } = Astro.props.page;
+const { data, ...other } = Astro.props.page;
 ---
 <Layout>
   <NavBar />
-  <Pagination {...url}/>
+  <Pagination other={other}/>
   <section class="flex flex-row flex-wrap justify-center items-center space-y-10 space-x-10">
     {
-      data.map(info => (<CardBraids data={info }/>))
+      data.map(info => (<CardBraids data={info}/>))
     }
   </section>
   <FooterInfo />

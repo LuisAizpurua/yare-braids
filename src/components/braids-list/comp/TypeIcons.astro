@@ -1,21 +1,41 @@
 ---
-import InfoExtra from './InfoExtra.astro';
-import IconAction from './IconAction.astro';
+import InfoExtraTsx from "src/reactive/InfoExtra";
+import IconAction from "./IconAction.astro";
 
-export const prerender = true
+export const prerender = false;
 
-const {id, name, description, prices} = Astro.props
+const { id, name, description, prices } = Astro.props;
 ---
 
 <div id="parent-info" class="flex flex-row p-5 bg-[#cbcbde] w-full">
-    <h1 class="font-bold text-gray-700 hover:cursor-pointer animate-pulse">
-    <a href={"/braid/" + id}>{name}</a>  
-    </h1>
-    <div class="flex-1"></div>
-  
-    <div class="flex flex-row justify-center flex-wrap">
-    <p id={`price-braid-${1}`} class="font-bold text-[#363636]">${prices[0].total}</p>
-           <IconAction id={id}/>
-    </div>
+  <h1 class="font-bold text-gray-700 hover:cursor-pointer animate-pulse">
+    <a href={"/braid/" + id}>{name}</a>
+  </h1>
+  <div class="flex-1"></div>
+
+  <div class="flex flex-row justify-center flex-wrap">
+    <p id={`price-braid-${1}`} class="font-bold text-[#363636]">
+      ${prices[0].total}
+    </p>
+    <IconAction id={id}/>
+    <!-- <IconActionTsx client:only="solid-js" id={id}/> -->
+  </div>
 </div>
-<InfoExtra id={id} prices={prices} /> 
+<InfoExtraTsx
+  client:only="solid-js"
+  id={`info-add-${id}`}
+  {prices}
+  class="hidden w-full transition-transform text-left bg-[#cbcbde] duration-1000 ease-in-out"
+/>
+<!-- <InfoExtra id={id} prices={prices} />  -->
+
+<!-- <script>
+    const btn = document.getElementsByName('btn')
+    btn.forEach(e=> e.addEventListener('click',funcion))
+   
+    function funcion(e){
+        const id: string = e.currentTarget.id
+        const infoExtraTag = document.getElementById(`info-add-${id.split('-')[1]}`) as HTMLDivElement
+        infoExtraTag?.classList.toggle('hidden')
+    }
+</script> -->

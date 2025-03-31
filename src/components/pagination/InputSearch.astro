@@ -3,27 +3,27 @@ import type { BraidsType } from "src/interface/braidsPrices.interface";
 
 export const prerender = false;
 
-const base = import.meta.env.PUBLIC_BASE_URL;
-const response = await fetch(`${base}/api/getAll.json`);
+ //const base = import.meta.env.PUBLIC_BASE_URL;
+// const response = await fetch(`${base}/api/getAll.json`);
 
-  if (!response.ok) {
-    throw new Error("Error al obtener los datos");
-  }
-const dataResponse = (await response.json()) as BraidsType[]; 
+//   if (!response.ok) {
+//     throw new Error("Error al obtener los datos");
+//   }
+// const dataResponse = (await response.json()) as BraidsType[]; 
 ---
 
-<input id="searchItem" list="searchList" class="rounded-xl p-2 shadow-2xl shadow-gray-400" type="text" placeholder="Buscar..." />
-<button class="bg-blue-400 rounded-2xl hover:cursor-pointer p-1.5 my-2 shadow-gray-600" id="btnSearch">
-    <span class="material-symbols-outlined p-0 m-0 hover:opacity-15 text-blue-700">
+<input id="searchItem" list="searchList" class="border-2 rounded-xl p-2 shadow-2xl shadow-gray-400" type="text" placeholder="Buscar..." />
+<button class="bg-blue-400 rounded-2xl hover:cursor-pointer p-1.5 my-2 shadow-gray-600 hover:bg-blue-500" id="btnSearch">
+    <span class="material-symbols-outlined p-0 m-0 hover:opacity-15 ">
         search
     </span>
 </button>
 
-<datalist id="searchList">
+<!-- <datalist id="searchList">
  {
     dataResponse.map(({id,name})=>(<option data-id={id}>{name}</option>))
  }   
-</datalist>
+</datalist> -->
 <script>
 const searchItem = document.querySelector('#searchItem') as HTMLInputElement
     document.querySelector('#btnSearch')!.addEventListener('click', searchBtn)

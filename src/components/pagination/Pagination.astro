@@ -1,13 +1,25 @@
 ---
-import SectionPaginate from "./SectionPaginate.astro"
+import InputSeachTsx from 'src/reactive/InputSearch';
+export const prerender = false
 
-export const prerender = true
-
-const {next=2, prev=1, current=1} = Astro.props
+const {other} = Astro.props
+const {currentPage,url} = other 
+const style = 'shadow-md shadow-black ring-3 ring-white rounded-2xl mx-3 w-50 h-20 p-2 m-auto underline-offset-0 text-blue-100 text-xl font-semibold bg-blue-500 active:bg-blue-400 hover:bg-blue-600 hover:text-white'
 ---
 
 <header class="my-8 m-auto text-center overflow-hidden shadow-2xs shadow-gray-200">
- <SectionPaginate next={next} 
-                  prev={prev} 
-                  current={current}/>
+
+    <nav class="w-full h-fit flex flex-wrap flex-row justify-center items-center">
+       <section class="w-full">
+            <!-- <InputSearch /> -->
+             <InputSeachTsx client:only="solid-js"/>
+        </section>
+            <section class="w-full flex-1"></section>
+            <section class="w-full text-center my-5">
+                <a type="button" class:list={[style,{'pointer-events-none bg-gray-500 text-gray-100': (currentPage==1)}]} href={`${url.prev}`}>anterior</a>
+                <span title={`pagina actual`} class={'bg-gray-300 font-semibold ring-2 ring-white rounded-2xl w-50 h-20 p-3'}>{currentPage}</span>
+                <a type="button" class:list={[style,{'pointer-events-none bg-gray-500 text-gray-100': (currentPage == 4)}]} href={`${url.next}`}>siguiente</a>
+            </section>
+      </nav>
+    
 </header>

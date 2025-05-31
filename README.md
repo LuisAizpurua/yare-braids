@@ -2,8 +2,7 @@
  |  \/  | | | |_   _| __|   \| __\ \ / /
  | |\/| | |_| | | | | _|| |) | _| \ V / 
  |_|  |_|\___/  |_| |___|___/|___| \_/  
-
----
+ 
 💇‍♀️ Catálogo de Peinados y Precios
 <div align="center">
 <img src="./public/logo.jpg" alt="Logo del Salón" width="200" height="200">

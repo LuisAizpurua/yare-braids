@@ -9,11 +9,11 @@
 <div align="center">
 <img src="./public/logo.jpg" alt="Logo del Salón" width="200" height="200">
 </div>
----
+<hr>
 📖 Descripción
 Sitio web estático moderno desarrollado con Astro.js para mostrar un catálogo elegante de peinados y sus precios. 
 Utilize Tailwind CSS para un diseño responsivo y atractivo, junto con Turso Cloud Database para una gestión de datos más eficiente que Astro DB.
-### 🌐 [**Visitar Sitio Web →**](https://yare-braids.netlify.app/v1/1/)
+<a href="https://yare-braids.netlify.app/v1/1/">🌐 Visitar Sitio Web → yare-braids </a>
 
 ✨ Características Principales
 

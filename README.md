@@ -1,4 +1,26 @@
-## THE PAGE OFICIAL IN THE WEB
+<pre lang="markdown"> ```  
+  __  __ _   _ _____ ___ ___  _____   __
+ |  \/  | | | |_   _| __|   \| __\ \ / /
+ | |\/| | |_| | | | | _|| |) | _| \ V / 
+ |_|  |_|\___/  |_| |___|___/|___| \_/  
+  ``` </pre>
+ 
+💇‍♀️ Catálogo de Peinados y Precios
+<div align="center">
+<img src="./public/logo.jpg" alt="Logo del Salón" width="200" height="200">
+</div>
+<hr>
+📖 Descripción
+Sitio web estático moderno desarrollado con Astro.js para mostrar un catálogo elegante de peinados y sus precios. 
+Utilize Tailwind CSS para un diseño responsivo y atractivo, junto con Turso Cloud Database para una gestión de datos más eficiente que Astro DB.
+<a href="https://yare-braids.netlify.app/v1/1/">🌐 Visitar Sitio Web → yare-braids </a>
 
+✨ Características Principales
 
-### [URL_YARE_BRAIDS](https://yare-braids.netlify.app/v1/1)
+🎨 Diseño Moderno: Interfaz elegante y responsiva con Tailwind CSS
+⚡ Rendimiento Optimizado: Sitio estático ultra-rápido con Astro.js
+🗄️ Base de Datos Eficiente: Integración con Turso Cloud para mejor rendimiento
+📱 Totalmente Responsivo: Compatible con dispositivos móviles y escritorio
+🖼️ Galería Visual: Showcase atractivo de diferentes estilos de peinados
+💰 Lista de Precios: Información clara y organizada de servicios y costos
+🔍 Búsqueda y Filtros: Encuentra fácilmente el peinado deseado

@@ -5,7 +5,7 @@ import {
   Index,
   Show
 } from "solid-js";
-import type { BraidsType } from "src/interface/braidsPrices.interface";
+import type { BraidsType } from "@interfaces/braidsPrices.interface";
 
 function InputSeachTsx() {
   const [data, setData] = createSignal<BraidsType[]>();
@@ -13,7 +13,7 @@ function InputSeachTsx() {
   const uriBraid = createMemo(()=> '/braid/'+ id() )
   
   createResource(async () => {
-    const dataResponse = (await import("../data/braids.data.json")).default as BraidsType[];
+    const dataResponse = (await import("@data/braids.data.json")).default as BraidsType[];
     setData(dataResponse);
   });
   

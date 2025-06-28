@@ -1,15 +1,15 @@
 ---
 import type { GetStaticPaths } from "astro";
-import IndexStatic from "src/components/page-static/IndexStatic.astro";
-import NavStatic from "src/components/page-static/NavStatic.astro";
-import type { BraidsType } from "src/interface/braidsPrices.interface";
-import Layout from "src/layouts/Layout.astro";
+import IndexStatic from "@components/page-static/IndexStatic.astro";
+import NavStatic from "@components/page-static/NavStatic.astro";
+import type { BraidsType } from "@interfaces/braidsPrices.interface";
+import Layout from "@layout/Layout.astro";
 
 export const prerender = true
 
 export const getStaticPaths = (async () => {
     try{
-      const dataResponse = (await import('../../data/braids.data.json')).default
+      const dataResponse = (await import('@data/braids.data.json')).default
 
     return dataResponse.map(data =>{ 
       return  {

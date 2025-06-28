@@ -1,4 +1,4 @@
-import type { PricesType } from "src/interface/braidsPrices.interface";
+import type { PricesType } from "@interfaces/braidsPrices.interface";
 
 import {splitProps } from 'solid-js'
 
@@ -7,7 +7,6 @@ interface Prop{
     prices: PricesType[]
     class: string
 }
-
 
 function InfoExtraTsx(props: Partial<Prop>){
 

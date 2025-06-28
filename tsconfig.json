@@ -11,7 +11,13 @@
     "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "@images/*": ["./src/assets/images/*"]
+      "@images/*": ["./src/assets/images/*"],
+      "@layout/*": ["./src/layouts/*"],
+      "@components/*": ["./src/components/*"],
+      "@styles/*":["./src/styles/*"],
+      "@interfaces/*":["./src/interface/*"],
+      "@data/*":["./src/data/*"],
+      "@reactive/*":["./src/reactive/*"]
     },
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
